@@ -1,0 +1,119 @@
+.sobre-header {
+    position: relative;
+    width: 100%;
+    height: 280px;
+    overflow: hidden;
+}
+
+.sobre-header .logo {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 90px;
+    filter: drop-shadow(0 0 5px #000a);
+}
+
+/* --- CONTAINER DOS CARDS --- */
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 24px;
+    align-items: start;
+    padding: 40px 20px;
+    justify-items: center;
+}
+
+/* --- CARD INDIVIDUAL --- */
+.card {
+    width: 100%;
+    max-width: 260px;
+    padding: 18px 16px;
+    background: #1a1a1a;
+    border-radius: 15px;
+    text-align: justify;
+    text-justify: inter-word;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    hyphens: auto;
+    color: white;
+    border: 2px solid #00ff9d;
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    min-height: 420px; /* ensure uniform card height */
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+/* --- FOTO COM EFEITO PORTAL --- */
+.portal-hover {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    /* subtle green neon ring behind the image */
+    box-shadow: 0 0 28px rgba(57,255,20,0.06), inset 0 0 10px rgba(57,255,20,0.02);
+    border: 1px solid rgba(57,255,20,0.06);
+    flex: 0 0 auto;
+}
+
+.portal-hover img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.4s ease, filter 0.25s ease, transform 0.25s ease;
+    /* default neon glow */
+    filter: drop-shadow(0 0 12px #39ff14) saturate(1.05);
+}
+
+/* EFEITO DE PORTAL AO PASSAR O MOUSE */
+.portal-hover:hover img {
+    transform: rotate(5deg) scale(1.1);
+    filter: brightness(1.2) drop-shadow(0 0 22px #39ff14) saturate(1.15);
+}
+
+/* about-text removed per request */
+
+/* ---------------------------------
+     Project about section styles
+     --------------------------------- */
+.project-about{
+    display: flex;
+    justify-content: center;
+    padding: 28px 20px 60px 20px;
+}
+.project-about-inner{
+    max-width: 980px;
+    width: 100%;
+    background: linear-gradient(180deg, rgba(3,6,12,0.7), rgba(6,12,22,0.7));
+    border: 1px solid rgba(57,255,20,0.06);
+    box-shadow: 0 18px 48px rgba(0,0,0,0.65), 0 0 28px rgba(57,255,20,0.02) inset;
+    padding: 20px 26px;
+    border-radius: 12px;
+}
+.project-about h2{
+    margin: 0 0 10px 0;
+    color: #eaffef;
+    font-size: 22px;
+    text-align: center;
+    text-shadow: 0 0 14px rgba(57,255,20,0.14), 0 0 6px rgba(57,255,20,0.06);
+}
+.project-about p{
+    margin: 0;
+    color: #cfeee0;
+    line-height: 1.6;
+    font-size: 16px;
+    text-align: center;
+    padding: 6px 4px 2px 4px;
+}
+
+@media (max-width:720px){
+    .project-about-inner{ padding: 16px; }
+    .project-about h2{ font-size:18px; }
+    .project-about p{ font-size:15px; }
+}

@@ -1,0 +1,73 @@
+#cabeçalho{
+    background: radial-gradient(circle at 10% 10%, rgba(124,252,0,0.03), transparent 6%),
+                linear-gradient(180deg, rgba(3,6,12,1), rgba(7,14,26,1));
+    color: var(--text, #e6faff);
+    width: 100vw;
+    min-height: 100vh;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 0;
+    padding: 36px 20px;
+    gap: 12px;
+}
+
+html, body, #root {
+    height: 100%;
+    margin: 0;
+}
+
+#cabeçalho h1{
+    margin: 0;
+    font-size: 48px;
+    color: var(--accent, #7CFC00);
+    text-shadow: 0 0 18px rgba(124,252,0,0.18), 0 4px 24px rgba(0,0,0,0.6);
+    letter-spacing: -1px;
+}
+
+#cabeçalho #links{
+    margin: 8px 0 0 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    gap: 12px;
+}
+
+#cabeçalho #links a {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 700;
+    padding: 8px 12px;
+    border-radius: 8px;
+    transition: transform .12s ease, box-shadow .12s ease;
+}
+
+#cabeçalho #links a:hover {
+    color: #fff;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 28px rgba(124,252,0,0.08);
+}
+
+#cabeçalho .subtle { color: var(--muted, #9fb4c4); font-size:14px; margin-top:6px; }
+
+/* hero logo displayed below the action buttons */
+.home { position: relative; overflow: visible; }
+.hero-content { position: relative; z-index: 2; text-align: center; }
+.home .home-actions { position: relative; z-index: 3; }
+.hero-logo {
+    display: block;
+    margin: 28px auto 6px auto;
+    width: 320px;
+    max-width: 70%;
+    height: auto;
+    opacity: 0.98;
+    filter: saturate(1.05);
+    z-index: 1;
+    pointer-events: none;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.6), 0 0 18px rgba(124,252,0,0.04);
+    border-radius: 8px;
+    background: transparent;
+}
+

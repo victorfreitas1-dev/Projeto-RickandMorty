@@ -6,7 +6,7 @@ export default function CharacterCard({ character, onOpen }) {
       <div className="card-body">
         <h3>{character.name}</h3>
         <p>{character.species} • {character.status}</p>
-        <button className="btn" onClick={onOpen}>Ver detalhes</button>
+        <button className="btn" onClick={onOpen}>Ver detalhes</button>/*onOpen abre  o modal 
       </div>
     </article>
   )

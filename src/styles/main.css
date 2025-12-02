@@ -41,11 +41,10 @@ body {
 .header nav a:hover{ color: var(--accent); transform: translateY(-2px); text-shadow:0 0 8px rgba(124,252,0,0.08); }
 .header nav .nav-active { color: var(--accent); font-weight:700; }
 
-/* site logo in header */
 .site-logo { height:36px; width:auto; vertical-align:middle; margin-right:10px; display:inline-block; }
 .logo-text { vertical-align:middle; display:inline-block; color:var(--text); margin-left:6px; }
 
-/* Neon glow for logos and hero image */
+
 .site-logo, .footer-logo, .hero-logo {
   filter: drop-shadow(0 0 12px #39ff14) saturate(1.05);
   transition: filter .18s ease, transform .12s ease;
@@ -127,10 +126,4 @@ p { color: var(--muted); }
 .dots { color:var(--muted); padding:0 8px; }
 
 
-.gallery { display:flex; gap:8px; margin-top:12px; flex-wrap:wrap; }
-.gallery img { width:300px; height:200px; object-fit:cover; border-radius:8px; }
 
-@media (max-width:600px){
-  .modal-content { flex-direction:column; align-items:center; }
-  .modal-content img { width:100%; max-width:400px; }
-}
